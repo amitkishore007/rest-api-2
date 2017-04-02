@@ -45,6 +45,7 @@ class Example extends REST_Controller {
 
         $id = $this->get('id');
 
+       
         // If the id parameter doesn't exist return all the users
 
         if ($id === NULL)
@@ -131,10 +132,7 @@ class Example extends REST_Controller {
         }
 
         // $this->some_model->delete_something($id);
-        $message = [
-            'id' => $id,
-            'message' => 'Deleted the resource'
-        ];
+        
 
         $this->set_response($message, REST_Controller::HTTP_NO_CONTENT); // NO_CONTENT (204) being the HTTP response code
     }
